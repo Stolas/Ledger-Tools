@@ -1,9 +1,8 @@
 #!/bin/bash
 
-source 'common.sh'
 TODAY=`date +%m/%d`
+AMOUNT=$1
 
-read AMOUNT
-printf "%s  Shopping\n" $TODAY >> food.dat
-printf "\tExpenses:Groceries\t%.2f EUR\n" $AMOUNT >> food.dat
+printf "%s Groceries\n" $TODAY >> food.dat
+printf "\t%-40s\t%.2f EUR\n" "Expenses:Food:Groceries" $AMOUNT >> food.dat
 printf "\tAssets:Checking\n" >> food.dat
